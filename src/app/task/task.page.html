@@ -1,0 +1,55 @@
+<ion-content class="content-bg" [fullscreen]="true">
+  <div class="navbar">
+    <ion-buttons class="menu">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-buttons>
+    <input class="search" type="search" placeholder="search">
+    <ion-buttons class="notife">
+      <ion-icon name="notifications"></ion-icon>
+    </ion-buttons>
+  </div>
+  <div class="container">
+    <h1 class="title">Demandes <br> D'intervetion </h1>
+    <p class="info">categories</p>
+  </div>
+  <div class="categories">
+    <ion-buttons class="categorie-btn">Infrastructures</ion-buttons>
+    <ion-buttons class="categorie-btn">Equipement </ion-buttons>
+    <ion-buttons class="categorie-btn">Batiment</ion-buttons>
+    <div class="items">
+      <ion-buttons class="filtre">
+        <ion-icon name="filter-circle-outline"></ion-icon>
+      </ion-buttons>
+      <ion-buttons class="download">
+        <ion-icon name="arrow-down-circle"></ion-icon>
+      </ion-buttons>
+    </div>
+    
+  </div>
+  <ion-list  class="custom-list">
+    <div *ngFor="let item of items" [ngClass]="{'list-items': true, 'etat-Non-Traiter': item.etat === 'Non Traiter', 'etat-Rejete': item.etat === 'Rejete', 'etat-Traite': item.etat === 'Traite'}">
+      <img src="../../assets/logo.png" alt="">
+      <div class="itemss">
+        <p class="DI"> N DI: <SPan>{{item.NDI}}</SPan></p>
+        <p [ngClass]="{'etat': true, 'Non-Traiter': item.etat === 'Non Traiter', 'Rejete': item.etat === 'Rejete', 'Traite': item.etat === 'Traite'}">{{item.etat}}</p>
+        <p class="demandeur">Demandeur: <span>{{item.demandeur}}</span></p>
+        <p class="date">Date: <span>{{item.Date}}</span></p>
+      </div>
+      <div class="action">
+        <ion-buttons class="action-butons">
+          <ion-icon [ngClass]="{'accepte': true, 'accepte1': item.etat === 'Rejete', 'accepte2': item.etat === 'Traite'}" name="checkmark-circle"></ion-icon>
+        </ion-buttons>
+        <ion-buttons  class="action-butons">
+          <ion-icon [ngClass]="{'reject': true, 'accepte1': item.etat === 'Rejete', 'accepte2': item.etat === 'Traite'}" name="close-circle"></ion-icon>
+        </ion-buttons>
+        <ion-buttons class="action-butons">
+          <ion-icon (click)="navigateToDiPage()"  [ngClass]="{'display': true, 'display1': item.etat === 'Rejete', 'display2': item.etat === 'Traite'}" name="eye"></ion-icon>
+        </ion-buttons>
+      </div>
+    </div>
+  </ion-list>
+  
+   
+</ion-content>
+
+

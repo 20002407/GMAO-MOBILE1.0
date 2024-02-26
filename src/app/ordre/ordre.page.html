@@ -1,0 +1,55 @@
+<ion-content class="content-bg" [fullscreen]="true">
+  <div class="navbar">
+    <ion-buttons class="menu">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-buttons>
+    <input class="search" type="search" placeholder="search">
+    <ion-buttons class="notife">
+      <ion-icon name="notifications"></ion-icon>
+    </ion-buttons>
+  </div>
+  <div class="container">
+    <h1 class="title">Ordre <br> de travaux </h1>
+    <p class="info">categories</p>
+  </div>
+  <div class="categories">
+    <ion-buttons class="categorie-btn">Infrastructures</ion-buttons>
+    <ion-buttons class="categorie-btn">Equipement </ion-buttons>
+    <ion-buttons class="categorie-btn">Batiment</ion-buttons>
+    <div class="items">
+      <ion-buttons class="filtre">
+        <ion-icon name="filter-circle-outline"></ion-icon>
+      </ion-buttons>
+      <ion-buttons class="download">
+        <ion-icon name="arrow-down-circle"></ion-icon>
+      </ion-buttons>
+    </div>
+    
+  </div>
+  <ion-list class="custom-list">
+    <div *ngFor="let item of items" [ngClass]="{'list-items': true, 'etat-OT-Creer': item.etat === 'OT Creer', 'etat-OT-Realise': item.etat === 'OT Realise', 'etat-OT-encours': item.etat === 'OT encours'}">
+      <img src="../../assets/logo.png" alt="">
+      <div class="itemss">
+        <p class="DI"> N OT: <SPan>{{item.NOT}}</SPan></p>
+        <p [ngClass]="{'etat': true, 'OT-Creer': item.etat === 'OT Creer', 'OT-Realise': item.etat === 'OT Realise', 'OT-encours': item.etat === 'OT encours'}">{{item.etat}}</p>
+        <p class="demandeur">Prestataire: <span>{{item.Prestataire}}</span></p>
+        <p class="date">Date: <span>{{item.Date}}</span></p>
+      </div>
+      <div class="action">
+        <ion-buttons class="action-butons">
+          <ion-icon (click)="navigateToDiPage()" [ngClass]="{'accepte': true, 'accepte1': item.etat === 'OT Creer', 'accepte2': item.etat === 'OT Realise', 'accepte3': item.etat === 'OT encours'}" name="eye"></ion-icon>
+        </ion-buttons>
+        <ion-buttons  class="action-butons">
+          <ion-icon [ngClass]="{'reject': true, 'reject1': item.etat === 'OT Realise', 'reject2': item.etat === 'OT encours'}" name="close-circle"></ion-icon>
+        </ion-buttons>
+        <ion-buttons class="action-butons">
+          <ion-icon  [ngClass]="{'display': true, 'display1': item.etat === 'OT Realise'}" name="chevron-down-circle"></ion-icon>
+        </ion-buttons>
+      </div>
+    </div>
+  </ion-list>
+  
+   
+</ion-content>
+
+

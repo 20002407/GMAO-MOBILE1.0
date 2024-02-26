@@ -1,0 +1,33 @@
+<ion-content class="content-bg" [fullscreen]="true">
+  <div class="navbar">
+    <ion-buttons class="menu" slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons class="notife">
+      <ion-icon name="notifications"></ion-icon>
+    </ion-buttons>
+  </div>
+  <div class="container">
+    <h1 class="title">Bienvenue <br> <span> Nom Prenom</span></h1>
+    <p class="txt">Choisissez Votre fonctionnalités desirable </p>
+    <p class="info">Carte des actifs</p>
+  </div>
+  <div class="card">
+    <div id="map" class="map-container"></div>
+    <div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content"></div>
+    </div>
+    <p class="txt1">Carte des actifs dans laquelle vous pouvez <br> trouvez plus d’infos sur les actifs demandes.</p>
+    <button class="btn1">Plus de details</button>
+  </div>
+  <div class="botton">
+    <button class="btn" >Plus de fonconalites</button>
+  </div>
+  
+    
+  
+  <div class="DI">
+    <button class="DI-btn" (click)="navigateToDiPage()">+</button>
+  </div>
+</ion-content>

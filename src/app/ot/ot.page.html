@@ -1,0 +1,94 @@
+<ion-content class="content-bg" [fullscreen]="true">
+  <div class="navbar">
+    <ion-buttons class="menu" slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-buttons class="notife">
+      <ion-icon name="notifications"></ion-icon>
+    </ion-buttons>
+  </div> 
+  <div class="container">
+    <h1 class="title">Creation d'un Ordre de <br> Travaux <span>DI N 2931</span></h1>
+    <p class="info">Ajouter les informations nécessaires</p>
+  </div>
+
+  <form [formGroup]="myForm1" (ngSubmit)="onSubmit()" (ngCancel)="onCancel()" class="form1" >
+    <div class="first">
+      <div class="line1">
+        <label for="utilisateur"  class="txt1" for="">Utilisateur</label>
+        <input name="utilisateur" formControlName="utilisateur" class="inputs" type="text" >
+      </div>
+      <div class="line1">
+        <label class="txt1" for="date_creation">Date de Creation</label>
+        <input name="date_creation" formControlName="date_creation" class="inputs" type="date" >
+      </div>
+    </div>
+
+    <div class="second">
+      <div class="line1">
+        <label class="txt1" for="centre_de_charge">Centre de charge</label>
+        <input name="centre_de_charge" formControlName="centre_de_charge" class="inputs" type="text" >
+      </div>
+      <div class="line1">
+        <label class="txt1" for="anomalie">Type d'anomalie</label>
+        <input name="anomalie" formControlName="anomalie" class="inputs" type="text" >
+      </div>
+    </div>
+
+    <div class="third">
+      <div class="line1">
+        <label class="txt1" for="urgence">Urgence</label>
+        <input name="urgence" formControlName="urgence" class="inputs" type="text" >
+      </div>
+      <div class="line1">
+        <label class="txt1" for="impact">Impact sur dsponible</label>
+        <input  name="impact" formControlName="impact" class="inputs" type="text" >
+      </div>
+    </div>
+    <div class="last">
+      <div class="forth">
+        <div class="line1">
+          <label class="txt1" for="type">Type</label>
+          <input name="type" formControlName="type" class="inputs1" type="text" >
+        </div>
+      </div>
+      <div class="fifth">
+        <div class="line1">
+          <label class="txt1" for="prestation">Prestation</label>
+          <input name="prestation" formControlName="prestation" class="inputs1" type="text" >
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <div class="check-box">
+      <label class="txt" for="vandalisme">Vandalisme: </label>
+      <input class="rad" id="vandalisme_oui" formControlName="vandalisme" type="radio" name="vandalisme" value="oui">
+      <label class="txt" for="vandalisme_oui">Oui</label>
+      <input class="rad" id="vandalisme_non" formControlName="vandalisme" type="radio" name="vandalisme" value="non">
+      <label class="txt" for="vandalisme_non">Non</label>
+    </div>
+
+    <div class="upload">
+      <label class="txt" for="photos">Ajouter des Photos:</label>
+      <input id="photos" formControlName="photos" type="file" name="photos">
+      <p class="sogoo">Veuillez Importer une photo</p>
+    </div>
+    <div class="six">
+      <div class="description">
+        <label class="txt1" for="description">Description:</label>
+        <textarea id="description" formControlName="description" class="desc" name="description"  placeholder="Description" ></textarea>
+      </div>
+    </div>
+    
+    <div class="btn">
+      <button class="submit" type="submit">Creer l'ordre de travail (OT)</button>
+      <button class="cancel" type="cancel">Fermer</button>
+    </div>
+    
+  </form>
+
+
+</ion-content>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Inter:wght@100..900&family=Lemon&display=swap');
+
+.content-bg{
+    --background: #EEF9FF;
+}
+ 
+.navbar{
+    display: flex;
+    
+}
+
+.menu{
+    color: #0061AC;
+    font-size: 40px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 20px;
+}
+
+.notife{
+    color: #0061AC;
+    font-size: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+
+.container{
+    margin: -15px  25px ;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: "Inter", sans-serif;
+}
+
+.info{
+    font-size: 13px;
+    font-weight: 200;
+    font-family: "Inter", sans-serif;
+}
+
+
+span{
+    color: #0061AC;
+}
+.txt{
+    font-size: 22px;
+    font-family: "Inder", sans-serif;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 30px;
+    margin: 30px;
+    border-color: #0A76B2;
+    background-color: #ffff;
+}
+
+.map-container {
+    width: 100%; 
+    height: 300px;
+    border-radius: 30px; 
+    overflow: hidden; 
+}
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+}
+
+.ol-popup-closer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #999999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.txt1 {
+    margin-top: 20px;
+    font-family: "Inter", sans-serif; /* Apply font family */
+    font-size: 14px; /* Fix font size typo */
+}
+
+.btn {
+    margin: 10px;
+    width: 245px;
+    height: 48px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #0061AC;
+    
+}
+
+.botton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn1{
+    padding: 10px;
+    border: solid 1px #0061AC;
+    border-radius: 10px;
+    background-color: #EEF9FF;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #0061AC;
+}
+
+
+.DI{
+    display: flex;
+}
+
+
+.DI-btn{
+    background-color: #0061AC;
+    color: #ffffff;
+    width: 70PX;
+    font-size: 60px;
+    height: 70px;
+    border-radius: 50px;
+    margin-left: 330px;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .container{
+        margin: 30px  35px ;
+    }
+    
+    .title{
+        font-size: 45px;
+    }
+
+
+    .info{
+        font-size: 23px;
+    }
+
+
+    .txt{
+        font-size: 32px;
+    }
+
+    .txt1 {
+        margin-top: 20px;
+        font-family: "Inter", sans-serif; /* Apply font family */
+        font-size: 30px; /* Fix font size typo */
+    }
+
+    .btn1{
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .btn{
+        font-size: 30px;
+        padding: 20px;
+        width: 420px;
+        height: 70px;
+    }
+
+    .DI-btn{
+        margin-left: 900px;
+    }
+
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 820px) {
+    .container{
+        margin: 10px  35px ;
+    }
+    
+    .title{
+        font-size: 35px;
+    }
+
+
+    .info{
+        font-size: 18px;
+    }
+
+
+    .txt{
+        font-size: 22px;
+    }
+
+    .txt1 {
+        margin-top: 20px;
+        font-family: "Inter", sans-serif; /* Apply font family */
+        font-size: 20px; /* Fix font size typo */
+    }
+
+    .btn1{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .btn{
+        font-size: 20px;
+        padding: 10px;
+        width: 300px;
+        height: 50px;
+    }
+
+    .DI-btn{
+        margin-left: 670px;
+    }
+}

@@ -1,0 +1,41 @@
+<ion-header class="header" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Add new Task
+    </ion-title>
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="upload-section">
+          <div class="upload-container">
+            <input type="file" id="fileInput" style="display: none;">
+            <label for="fileInput">
+              <ion-icon name="cloud-upload"></ion-icon>
+              <p> Tap To upload an image</p>
+            </label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+        <div class="task-details">
+          <p class="task-details-title">The Task Details</p>
+          <p class="task-details-info">Here you can add the tasks details and declare about the problem in the description session to be solde by the targeted team</p>
+          <form>
+            <ion-input #title type="text" placeholder="Title" class="rounded-blue"></ion-input>
+            <ion-input #date type="date" placeholder="Date" class="rounded-blue"></ion-input>
+            <ion-textarea #description placeholder="Description" class="rounded-blue description"></ion-textarea>
+            <ion-button type="submit" expand="block" color="dark" class="custom-button">Add Task</ion-button>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

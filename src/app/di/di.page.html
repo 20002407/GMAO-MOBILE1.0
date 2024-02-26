@@ -1,0 +1,68 @@
+<ion-content class="content-bg" [fullscreen]="true">
+  <div class="navbar">
+    <ion-buttons class="menu">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-buttons>
+    <input class="search" type="search" placeholder="search">
+    <ion-buttons class="notife">
+      <ion-icon name="notifications"></ion-icon>
+    </ion-buttons>
+  </div>
+  <div class="container">
+    <h1 class="title">Creer une demande <br> d'intervention</h1>
+    <p class="info">Ajouter les informations nécessaires</p>
+  </div>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="input1">
+    <label for="ouvrage">Ouvrage:</label>
+    <input id="ouvrage" formControlName="ouvrage" class="inputs" type="text" name="ouvrage" placeholder="Ouvrage">
+    <label for="element">Element:</label>
+    <input id="element" formControlName="element" class="inputs" type="text" name="element" placeholder="Element">
+  </div>
+
+  <div class="input1">
+    <label for="famille">Famille:</label>
+    <input id="famille" class="famille" formControlName="famille" type="text" name="famille" placeholder="Famille">
+  </div>
+
+  <div class="input1">
+    <label for="centre">Centre des charges:</label>
+    <input id="centre" formControlName="centre" class="inputs" type="text" name="centre" placeholder="Centre des charges">
+    <label for="demendeur">Demendeur:</label>
+    <input id="demendeur" formControlName="demandeur" class="inputs" type="text" name="demandeur" placeholder="Demendeur">
+  </div>
+
+  <div class="input1">
+    <label for="date_reclamation">Date de Reclamation:</label>
+    <input id="date_reclamation" formControlName="date_reclamation" class="inputs" type="date" name="date_reclamation" placeholder="Date de Reclamation">
+    <label for="type_anomalie">Type d'anomalie:</label>
+    <input id="type_anomalie" formControlName="type_anomalie" class="inputs" type="text" name="type_anomalie" placeholder="Type d'anomalie">
+  </div>
+
+  <div class="check-box">
+    <p class="yoo">Vandalisme:</p>
+    <label style="display: block !important;" for="vandalisme_oui">Oui</label>
+    <input id="vandalisme_oui" class="ja" formControlName="vandalisme" type="radio" name="vandalisme" value="oui">
+    <label style="display: block !important;" for="vandalisme_non">Non</label>
+    <input id="vandalisme_non" class="ja" type="radio" formControlName="vandalisme" name="vandalisme" value="non">
+  </div>
+
+  <div class="upload">
+    <label for="photos">Ajouter des Photos:</label>
+    <input id="photos" formControlName="photos" type="file" name="photos">
+    <p class="sogoo">Veuillez Importer une photo</p>
+  </div>
+
+  <div class="description">
+    <label for="description">Description:</label>
+    <textarea id="description" class="desc" name="description" formControlName="description" placeholder="Description" rows="8" cols="50"></textarea>
+  </div>
+  <div class="btn">
+    <button class="submit" type="submit">Enregistrer</button>
+    <button class="cancel" type="submit">Annuler</button>
+  </div>
+  
+
+</form>
+</ion-content>
